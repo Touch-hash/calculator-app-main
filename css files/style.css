@@ -1,0 +1,304 @@
+/* start global value */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* variables css */
+
+/* end variabes css */
+/* start components class */
+
+/* end components class */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: #3b4664;
+}
+.container {
+  margin: 0 auto;
+}
+/* start meadia querie */
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header .container {
+    justify-content: space-between !important;
+  }
+  header .container h2 {
+    margin-left: 0px !important;
+  }
+  header .container .mode {
+    margin-right: 0px !important;
+  }
+
+  .Calculate .container #CalculateScreen {
+    width: 950% !important;
+    height: 130px !important;
+    font-size: 40px !important;
+  }
+  .Calculate .container .content {
+    width: 100% !important;
+  }
+  .Calculate .container .CalculateBody {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)) !important;
+  }
+  .Calculate .container .CalculateBody li {
+    width: 75% !important;
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 540px;
+    margin: 0 auto;
+  }
+  header .container {
+    justify-content: space-between !important;
+  }
+  header .container h2 {
+    margin-left: 10px !important;
+  }
+  header .container .mode {
+    margin-right: 10px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  header .container {
+    justify-content: space-around !important;
+  }
+  header .container h2 {
+    margin-left: 0px !important;
+  }
+  header .container .mode {
+    margin-right: 0px !important;
+  }
+  .Calculate .container .content {
+    width: fit-content;
+    margin: 15px auto;
+    width: 70% !important;
+  }
+  .Calculate .container .CalculateBody {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+  .Calculate .container .content {
+    width: fit-content;
+    margin: 15px auto;
+    width: 55% !important;
+  }
+  .Calculate .container .CalculateBody {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header .container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+header .container h2 {
+  margin-left: 15px;
+}
+header .container .mode {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-right: 15px;
+}
+header .container .mode .theme {
+  display: flex;
+  flex-direction: column;
+}
+header .container .mode .theme .moving {
+  width: 100px;
+  padding: 5px 0;
+  background-color: #252c46;
+  border-radius: 15px;
+  cursor: pointer;
+}
+header .container .mode .theme .moving .movingCircle {
+  background-color: #d63c32;
+  display: block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  left: 8px;
+}
+
+header .container .mode .theme .order {
+  display: flex;
+  justify-content: space-around;
+}
+.Calculate .container .contain {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.Calculate .container #CalculateScreen {
+  width: 520px;
+  height: 150px;
+  background-color: #181f32;
+  border-radius: 15px;
+  border: none;
+  font-size: 50px;
+  color: white;
+}
+
+.Calculate .container #CalculateScreen:focus {
+  outline: none;
+}
+
+.Calculate .container .content {
+  background-color: #252d44;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 15px auto;
+  width: 45%;
+}
+.Calculate .container .CalculateBody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+.Calculate .container .CalculateBody li {
+  list-style: none;
+  width: 75%;
+  padding: 14px 0;
+  border-radius: 10px;
+  color: #434d58;
+  background-color: #eae3db;
+  margin: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Calculate .container .content .btns {
+  display: flex;
+  justify-content: center;
+}
+.Calculate .container .content .btns button {
+  width: 20%;
+  margin: 10px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.Calculate .container .content .btns .reset,
+.content .btns .undo,
+.content .btns .ANS {
+  background-color: #647299;
+}
+
+.Calculate .container .content .btns .equal {
+  background-color: #d13f30;
+}
+
+.Calculate .container .CalculateBody .del {
+  background-color: #647299 !important;
+  color: white;
+  transition: 0.3s;
+}
+
+/* start del colors */
+.Calculate .container .CalculateBody li.delOne {
+  background-color: #647299 !important;
+}
+.Calculate .container .CalculateBody li.delTwo {
+  background-color: #647299 !important;
+}
+.Calculate .container .CalculateBody li.delThree {
+  background-color: #57087d !important;
+}
+/* end del colors */
+
+/* start hover */
+/* header hover */
+/* first mode */
+header .container .mode .theme .moving span.movingCircleOne:hover {
+  background-color: #f96b5b !important;
+}
+/* seconde mode */
+header .container .mode .theme .moving span.movingCircleTwo:hover {
+  background-color: #fb8837 !important;
+}
+/* three mode */
+header .container .mode .theme .moving span.movingCircleThree:hover {
+  background-color: #96fdfa !important;
+}
+/* all lis hover */
+.Calculate .container .CalculateBody li:hover {
+  background-color: #ffffff !important;
+}
+.Calculate .container .CalculateBody li.lisThreeMode:hover {
+  background-color: #6b34ac !important;
+}
+/* reset hover */
+.Calculate .container .content .btns button.resetOne:hover {
+  background-color: #a2b3e1 !important;
+}
+.Calculate .container .content .btns button.resetTwo:hover {
+  background-color: #60b5bf !important;
+}
+.Calculate .container .content .btns button.resetThree:hover {
+  background-color: #8631b0 !important;
+}
+/* equal hover */
+.Calculate .container .content .btns button.equalOne:hover {
+  background-color: #f96c5b !important;
+}
+.Calculate .container .content .btns button.equalTwo:hover {
+  background-color: #f96c5b !important;
+}
+.Calculate .container .content .btns button.equalThree:hover {
+  background-color: #94fff9 !important;
+}
+/* del hover */
+.Calculate .container .CalculateBody li.delOne:hover {
+  background-color: #a2b3e1 !important;
+}
+.Calculate .container .CalculateBody li.delTwo:hover {
+  background-color: #62b5bd !important;
+}
+.Calculate .container .CalculateBody li.delThree:hover {
+  background-color: #8631ae !important;
+}
+/* end hover */
